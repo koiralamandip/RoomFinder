@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:background="@android:drawable/dialog_holo_light_frame"
+        android:layout_margin="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="2dp">
+
+            <TextView
+                android:textStyle="bold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Number of Rooms : "
+                android:layout_weight="1"
+                android:textColor="#111"/>
+
+            <TextView
+                android:id="@+id/room_count"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Number of Rooms : "
+                android:layout_weight="1"
+                android:textColor="#111"/>
+        </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="2dp">
+
+        <TextView
+            android:textStyle="bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Room Type : "
+            android:layout_weight="1"
+            android:textColor="#111"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Room Type (Single, Flat, Single/Flat)"
+            android:layout_weight="1"
+            android:id="@+id/room_type"
+            android:textColor="#111"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="2dp">
+
+        <TextView
+            android:textStyle="bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Price in Rs. (per Single, per Flat) : "
+            android:layout_weight="1"
+            android:textColor="#111"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Price"
+            android:layout_weight="1"
+            android:id="@+id/price"
+            android:textColor="#111"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="2dp">
+
+        <TextView
+            android:textStyle="bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Place Name : "
+            android:layout_weight="1"
+            android:textColor="#111"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Place Name"
+            android:id="@+id/location"
+            android:layout_weight="1"
+            android:textColor="#111"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="2dp">
+
+        <TextView
+            android:textStyle="bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Mobile Number : "
+            android:layout_weight="1"
+            android:textColor="#111"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Mobile Number"
+            android:layout_weight="1"
+            android:id="@+id/contact"
+            android:textColor="#111"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="2dp">
+
+        <TextView
+            android:textStyle="bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Owner Name : "
+            android:layout_weight="1"
+            android:textColor="#111"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Owner Name"
+            android:id="@+id/ownerName"
+            android:layout_weight="1"
+            android:textColor="#111"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/posterLayout"
+        android:layout_margin="2dp">
+
+        <TextView
+            android:textStyle="bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Posted By : "
+            android:layout_weight="1"
+            android:textColor="#111"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Poster Name"
+            android:id="@+id/poster"
+            android:layout_weight="1"
+            android:textColor="#111"/>
+    </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Description"
+            android:layout_margin="2dp"
+            android:id="@+id/description"
+            android:textColor="#111"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <com.example.roomfinder.OptionButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/round_button_small"
+                android:backgroundTint="#fff"
+                android:id="@+id/callButton"
+                android:textColor="#333"
+                android:layout_weight="1"
+                android:layout_margin="1dp"
+                android:text="&#xe942;" />
+
+            <com.example.roomfinder.OptionButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/round_button_small"
+                android:backgroundTint="#fff"
+                android:id="@+id/smsButton"
+                android:textColor="#333"
+                android:layout_weight="1"
+                android:layout_margin="1dp"
+                android:text="&#xea84;" />
+
+            <com.example.roomfinder.OptionButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/round_button_small"
+                android:backgroundTint="#fff"
+                android:id="@+id/locatioView"
+                android:textColor="#333"
+                android:layout_weight="1"
+                android:layout_margin="1dp"
+                android:text="&#xe94c;" />
+
+            <com.example.roomfinder.OptionButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/round_button_small"
+                android:backgroundTint="#fff"
+                android:id="@+id/editRoom"
+                android:textColor="#333"
+                android:layout_margin="1dp"
+                android:layout_weight="1"
+                android:text="&#xe906;" />
+
+            <com.example.roomfinder.OptionButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/round_button_small"
+                android:backgroundTint="#fff"
+                android:id="@+id/deleteRoom"
+                android:textColor="#333"
+                android:layout_margin="1dp"
+                android:layout_weight="1"
+                android:text="&#xe9ac;" />
+
+            <com.example.roomfinder.OptionButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/round_button_small"
+                android:backgroundTint="#fff"
+                android:id="@+id/shareBtn"
+                android:textColor="#333"
+                android:layout_margin="1dp"
+                android:layout_weight="1"
+                android:text="&#xe949;" />
+
+        </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="h"
+        android:textStyle="bold"
+        android:layout_margin="2dp"
+        android:id="@+id/infoImage"
+        android:textColor="#111"/>
+    </LinearLayout>

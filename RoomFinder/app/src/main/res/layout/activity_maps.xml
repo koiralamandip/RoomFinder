@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    tools:context=".MapsActivity">
+
+    <RelativeLayout
+    android:id="@+id/divMap"
+    android:textStyle="bold"
+    android:background="#fff"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </fragment>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="5dp"
+        android:id="@+id/topMenu"
+        android:visibility="gone"
+        android:background="@drawable/round_textbox_1"
+        android:alpha = "0.9">
+
+        <com.example.roomfinder.OptionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/round_button_small"
+            android:backgroundTint="#fff"
+            android:id="@+id/homePageLoad"
+            android:textColor="#333"
+            android:layout_margin="1dp"
+            android:onClick="homeLoader"
+            android:text="&#xe902;" />
+
+        <com.example.roomfinder.OptionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/round_button_small"
+            android:backgroundTint="#fff"
+            android:id="@+id/addRoomLoad"
+            android:textColor="#333"
+            android:layout_margin="1dp"
+            android:onClick="addRoomAction"
+            android:text="&#xe900;+" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/divRegistration"
+        android:textStyle="bold"
+        android:alpha="1"
+        android:background="#eee"
+        android:visibility="gone"
+        android:layout_margin="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:padding="10dp">
+
+        <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentRight="true">
+
+        <Button
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:text="&#xea0f;"
+            android:onClick="registrationCanceller"
+            android:textColor="#eee"
+            android:id="@+id/regCancelBtn"
+            android:background="#f00"/>
+        </LinearLayout>
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_margin="10dp"
+        android:padding="0dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/round_profile"
+        android:id="@+id/profile"
+        android:alpha="1"
+        android:onClick="setProfileLoader"
+        android:tooltipText="+Add Image"
+        android:textStyle="bold"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/profile"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:alpha="0.87">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:hint="Firstname"
+            android:id="@+id/regFirstname"
+            android:inputType="text"
+            android:layout_margin="5dp"
+            android:padding="10dp"
+            android:textColor="#111"
+            android:textColorHint="#111"
+            android:background="@drawable/round_textbox_1" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:hint="Surname"
+            android:id="@+id/regSurname"
+            android:layout_margin="5dp"
+            android:inputType="text"
+            android:padding="10dp"
+            android:textColor="#111"
+            android:textColorHint="#111"
+            android:background="@drawable/round_textbox_1" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:hint="Phone"
+            android:id="@+id/regPhone"
+            android:layout_margin="5dp"
+            android:inputType="text"
+            android:padding="10dp"
+            android:textColor="#111"
+            android:textColorHint="#111"
+            android:background="@drawable/round_textbox_1" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:hint="Username"
+            android:id="@+id/regUsername"
+            android:inputType="text"
+            android:layout_margin="5dp"
+            android:padding="10dp"
+            android:textColor="#111"
+            android:textColorHint="#111"
+            android:background="@drawable/round_textbox_1" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:hint="Password"
+            android:layout_margin="5dp"
+            android:padding="10dp"
+            android:id="@+id/regPassword"
+            android:inputType="textPassword"
+            android:textColor="#111"
+            android:textColorHint="#111"
+            android:background="@drawable/round_textbox_1" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:hint="Re-enter Password"
+            android:id="@+id/regPasswordRe"
+            android:inputType="textPassword"
+            android:layout_margin="5dp"
+            android:padding="10dp"
+            android:textColor="#111"
+            android:textColorHint="#111"
+            android:background="@drawable/round_textbox_1" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="Register"
+            android:onClick="registerAction"
+            android:background="@drawable/round_button"
+            android:textColor="#fff"
+            android:textStyle="bold"
+            android:layout_margin="5dp"
+            android:id="@+id/regBtn" />
+
+    </LinearLayout>
+    </RelativeLayout>
+
+
+
+
+    <RelativeLayout
+        android:id="@+id/divLogin"
+        android:textStyle="bold"
+        android:alpha="1"
+        android:background="#eee"
+        android:visibility="gone"
+        android:layout_margin="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:padding="10dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/loginCancelHolder"
+            android:layout_alignParentRight="true">
+
+            <Button
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:text="&#xea0f;"
+                android:id="@+id/loginCancelBtn"
+                android:onClick="loginCanceller"
+                android:textColor="#eee"
+                android:background="#f00"/>
+        </LinearLayout>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/username"
+            android:layout_below="@+id/loginCancelHolder"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="5dp"
+            android:background="@drawable/round_textbox_1"
+            android:hint="Username"
+            android:inputType="text"
+            android:textColor="#111"
+            android:alpha="0.9"
+            android:textColorHint="#111"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/password"
+            android:inputType="textPassword"
+            android:background="@drawable/round_textbox_1"
+            android:layout_below="@+id/username"
+            android:layout_margin="5dp"
+            android:textColor="#111"
+            android:textColorHint="#111"
+            android:alpha="0.9"
+            android:hint="Password"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="Login"
+            android:layout_margin="5dp"
+            android:background="@drawable/round_button"
+            android:layout_below="@+id/password"
+            android:id="@+id/btnLogin"
+            android:onClick="loginAction"
+            android:alpha="0.9"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:gravity="right"
+        android:id="@+id/notLoggedInInfo"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:alpha="0.9"
+        android:orientation="horizontal">
+
+        <com.example.roomfinder.OptionButton
+            android:backgroundTint="#fff"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#333"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif"
+            android:text="&#xea13;"
+            android:id="@+id/loginLoad"
+            android:layout_margin="10dp"
+            />
+        <com.example.roomfinder.OptionButton
+            android:backgroundTint="#fff"
+            android:id="@+id/regLoad"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#333"
+            android:textStyle="bold"
+            android:layout_margin="10dp"
+            android:fontFamily="sans-serif"
+            android:text="&#xe973;"
+            android:layout_marginBottom="20dp"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:gravity="right"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:alpha="0.9"
+        android:id="@+id/loggedInInfo"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:textColor="#333"
+            android:id="@+id/loggedInImage"
+            android:fontFamily="sans-serif"
+            android:textStyle="bold"
+            android:shadowColor="#00f"
+            android:shadowRadius="2.0"
+            android:layout_margin="10dp"
+            />
+
+        <com.example.roomfinder.OptionButton
+            android:backgroundTint="#fff"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#333"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif"
+            android:text="&#xea14;"
+            android:onClick="logoutAction"
+            android:layout_margin="10dp"
+            />
+    </LinearLayout>
+
+    <com.example.roomfinder.OptionButton
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:backgroundTint="#fff"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#333"
+        android:id="@+id/gpsBtn"
+        android:textStyle="bold"
+        android:layout_margin="10dp"
+        android:fontFamily="sans-serif"
+        android:text="&#xe9b3;" />
+</RelativeLayout>
