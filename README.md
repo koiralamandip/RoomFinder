@@ -6,28 +6,25 @@
 
 3. Create two tables users and rooms under that database, with the following:
 
-Tables			Entities			Attributes			Data types			Constraints
------------------------------------------------------------------------------------------------------------------------------------
-users			user				user_id				NUMBER(11)			PK
-							firstname			VARCHAR(255)
-							surname				VARCHAR(255)
-							phone				VARCHAR(10)
-							username			VARCHAR(255)
-							password			VARCHAR(255)
-
-
-rooms			room				room_id				NUMBER(11)			PK
-							room_count			NUMBER(10)
-							room_type			VARCHAR(255)
-							price				VARCHAR(255)
-							location			VARHCAR(255)
-							latitude			VARCHAR(255)
-							longitude			VARCHAR(255)
-							contact				VARCHAR(10)
-							ownerName			VARCHAR(255)
-							description			TEXT
-							user_id*			NUMBER(11)			FK
-
--------------------------------------------------------------------------------------------------------------------------------------
+| Tables | Entities | Attributes | Data types | Constraints |
+| ------ | -------- | ---------- | ---------- | ----------- |
+| users | user | user_id | NUMBER(11) | PK |
+| | | firstname | VARCHAR(255) | |
+| | | surname | VARCHAR(255) | |
+| | | phone | VARCHAR(10) | |
+| | | username | VARCHAR(255) | |
+| | | password | VARCHAR(255) | |
+| | | | | |
+| rooms | room | room_id | NUMBER(11) | PK |
+| | | room_count | NUMBER(10) | |
+| | | room_type | VARCHAR(255) | |
+| | | price | VARCHAR(10) | |
+| | | location | VARCHAR(255) | |
+| | | latitude | VARCHAR(255) | |
+| | | longitude | VARCHAR(255) | |
+| | | contact | VARCHAR(10) | |
+| | | ownerName | VARCHAR(255) | |
+| | | description | TEXT | |
+| | | user_id* | NUMBER(11) | FK |
 
 4. You may need to modify the localhost IP address to match your's, inside Session.java, property name serverIP.
